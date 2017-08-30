@@ -3,6 +3,8 @@ package com.example.androidthings.myproject;
 import com.google.android.things.pio.Gpio;
 
 /**
+ * Toggle an LED with a button.
+ * Uses the the Capacitive button A and the LED above it on the Rainbow HAT board
  * Created by bjoern on 8/30/17.
  */
 

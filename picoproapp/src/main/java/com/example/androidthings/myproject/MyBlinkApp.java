@@ -3,6 +3,8 @@ package com.example.androidthings.myproject;
 import com.google.android.things.pio.Gpio;
 
 /**
+ * Blink two LEDs in an alternating pattern using delay()
+ * Uses the LEDs above pads A (red) and B (green) on the Rainbow HAT board
  * Created by bjoern on 7/26/17.
  */
 

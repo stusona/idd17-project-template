@@ -25,7 +25,8 @@ import com.google.android.things.pio.Gpio;
 import com.google.android.things.pio.PeripheralManagerService;
 
 /**
- * Skeleton of the main Android Things activity.
+ * The main Android Things activity.
+ * Students should change which application class is loaded below, but otherwise leave this unchanged.
  *
  */
 public class MainActivity extends Activity {

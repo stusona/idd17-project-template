@@ -3,8 +3,10 @@ package com.example.androidthings.myproject;
 import com.google.android.things.pio.Gpio;
 
 /**
- * Created by bjoern on 8/29/17.
+ * Minimal example for how to use setEdgeTrigger() and digitalEdgeEvent().
  * uses the Rainbow HAT - blinks the red LED above pad A when pad A is pressed
+ *
+ * Created by bjoern on 8/29/17.
  */
 
 public class MyMinimalEventApp extends SimplePicoPro {

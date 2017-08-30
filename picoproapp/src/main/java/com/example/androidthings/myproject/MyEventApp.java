@@ -4,7 +4,7 @@ import com.google.android.things.pio.Gpio;
 
 /**
  * Created by bjoern on 8/29/17.
- * uses the Rainbow HAT - blinks the red LED above pads A,B,C when corresponding pad is pressed
+ * Uses the Rainbow HAT - blinks the red LED above pads A,B,C when corresponding pad is pressed
  */
 
 public class MyEventApp extends SimplePicoPro {

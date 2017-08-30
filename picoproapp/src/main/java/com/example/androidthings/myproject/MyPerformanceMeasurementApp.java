@@ -3,10 +3,11 @@ package com.example.androidthings.myproject;
 import com.google.android.things.pio.Gpio;
 
 /**
+ * Small example to measure performance of the loop() construct.
  * Created by bjoern on 8/1/17.
  */
 
-public class MyButtonReadApp extends SimplePicoPro {
+public class MyPerformanceMeasurementApp extends SimplePicoPro {
     Gpio button1 = GPIO_175;
     Gpio button2 = GPIO_174;
     Gpio led1 = GPIO_34;

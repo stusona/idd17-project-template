@@ -9,6 +9,12 @@ import com.google.android.things.pio.GpioCallback;
 import java.io.IOException;
 
 /**
+ * This is an abstract parent class that defines utility functions for the SimpleX API.
+ * Different classes for concrete boards like the Raspberry Pi or the Pico Pro subclass
+ * it to define board-specific configuration.
+ *
+ * Students don't have to modify this file.
+ *
  * Created by bjoern on 8/14/17.
  */
 
