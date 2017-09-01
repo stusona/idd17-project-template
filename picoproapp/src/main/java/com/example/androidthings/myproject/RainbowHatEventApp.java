@@ -7,7 +7,7 @@ import com.google.android.things.pio.Gpio;
  * Uses the Rainbow HAT - blinks the red LED above pads A,B,C when corresponding pad is pressed
  */
 
-public class MyEventApp extends SimplePicoPro {
+public class RainbowHatEventApp extends SimplePicoPro {
     /* Mapping of buttons and LEDs to GPIO pins */
     Gpio buttonA = GPIO_174;
     Gpio buttonB = GPIO_175;

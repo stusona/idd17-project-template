@@ -8,7 +8,7 @@ import com.google.android.things.pio.Gpio;
  * Created by bjoern on 7/26/17.
  */
 
-public class MyBlinkApp extends SimplePicoPro {
+public class RainbowHatBlinkApp extends SimplePicoPro {
     Gpio redLED = GPIO_34;
     Gpio greenLED = GPIO_32;
 

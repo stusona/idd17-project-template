@@ -8,7 +8,7 @@ import com.google.android.things.pio.Gpio;
  * Created by bjoern on 8/30/17.
  */
 
-public class MyButtonApp extends SimplePicoPro {
+public class RainbowHatButtonApp extends SimplePicoPro {
     /* Mapping of buttons and LEDs to GPIO pins */
     Gpio buttonA = GPIO_174;
     Gpio ledA = GPIO_34;

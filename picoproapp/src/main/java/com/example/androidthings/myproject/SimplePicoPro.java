@@ -3,6 +3,7 @@ package com.example.androidthings.myproject;
 import android.os.SystemClock;
 import android.util.Log;
 
+import com.google.android.things.contrib.driver.adcv2x.Adcv2x;
 import com.google.android.things.pio.Gpio;
 import com.google.android.things.pio.I2cDevice;
 import com.google.android.things.pio.PeripheralManagerService;
@@ -33,7 +34,11 @@ public abstract class SimplePicoPro extends SimpleBoard {
     static I2cDevice I2C1;
     static SpiDevice SPI3_0,SPI3_1;
     static UartDevice UART6;
-
+    static Adcv2x ADS1015;
+    static int A0 = 0;
+    static int A1 = 1;
+    static int A2 = 2;
+    static int A3 = 3;
 
     public SimplePicoPro() {
         try {
@@ -90,6 +95,29 @@ public abstract class SimplePicoPro extends SimpleBoard {
         } catch (IOException e) {
             Log.e(TAG, "preSetup", e);
         }
+    }
+    void analogInit() {
+        // This assumes the IDD HAT is on the board
+        try {
+            ADS1015 = new Adcv2x("I2C1",Adcv2x.I2C_ADDRESS_48);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    float analogRead(int channel) {
+        float result = 0.f;
+        if(ADS1015!=null) {
+            try {
+
+                result = ADS1015.getResult(channel);
+
+            } catch (IOException e) {
+                Log.e(TAG, "analogRead", e);
+            }
+        } else {
+            Log.e("TAG","ADS1015 not configured. Please call analogInit() first. Returning 0.");
+        }
+        return result;
     }
 
     public void teardown() {

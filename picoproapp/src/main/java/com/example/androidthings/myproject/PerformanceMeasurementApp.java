@@ -7,7 +7,7 @@ import com.google.android.things.pio.Gpio;
  * Created by bjoern on 8/1/17.
  */
 
-public class MyPerformanceMeasurementApp extends SimplePicoPro {
+public class PerformanceMeasurementApp extends SimplePicoPro {
     Gpio button1 = GPIO_175;
     Gpio button2 = GPIO_174;
     Gpio led1 = GPIO_34;

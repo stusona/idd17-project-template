@@ -9,7 +9,7 @@ import com.google.android.things.pio.Gpio;
  * Created by bjoern on 8/29/17.
  */
 
-public class MyMinimalEventApp extends SimplePicoPro {
+public class RainbowHatMinimalEventApp extends SimplePicoPro {
     Gpio buttonA = GPIO_174;
     Gpio ledA = GPIO_34;
 
