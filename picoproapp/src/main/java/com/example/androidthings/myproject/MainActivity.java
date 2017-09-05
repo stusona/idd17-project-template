@@ -20,6 +20,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.widget.EditText;
 
 import com.google.android.things.pio.PeripheralManagerService;
 
@@ -32,13 +33,21 @@ public class MainActivity extends Activity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     /** CHANGE THE RIGHT-HAND SIDE OF THIS LINE TO THE NAME OF YOUR APPLICATION CLASS **/
-    private SimpleBoard myBoardApp = new IddHatAnalogReadApp();
+    private SimplePicoPro myBoardApp = new IddHatAnalogReadApp();
 
     /** DON'T CHANGE THE CODE BELOW - PUT YOUR CODE INTO YOUR APPLICATION CLASS **/
     private Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        /** SCREEN INITIALIZATION */
+        // TODO: What happens if there is no screen attached?
+        setContentView(R.layout.textlayout);
+        myBoardApp.setActivity(this);
+        EditText editText = (EditText) findViewById(R.id.editText);
+
+
         Log.d(TAG, "java.lang.ObjectonCreate");
 
         PeripheralManagerService service = new PeripheralManagerService();
