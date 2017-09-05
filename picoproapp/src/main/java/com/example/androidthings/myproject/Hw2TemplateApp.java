@@ -48,8 +48,12 @@ public class Hw2TemplateApp extends SimplePicoPro {
     @Override
     public void loop() {
         //nothing to do here
-        if ((millis() - buttonTimer) >= 300) {
+        if (((millis() - buttonTimer) >= 300) && buttonPressed==HIGH) {
+            if (button1State==HIGH && button2State==LOW) printCharacterToScreen('a');
+            if (button1State==LOW && button2State==HIGH) printCharacterToScreen('b');
+            if (button1State==HIGH && button2State==HIGH) printCharacterToScreen('c');
 
+            // finished with character, set buttonPressed flag back to low
             buttonPressed = LOW;
         }
     }
@@ -58,6 +62,7 @@ public class Hw2TemplateApp extends SimplePicoPro {
     void digitalEdgeEvent(Gpio pin, boolean value) {
 
         if (buttonPressed == LOW) {
+            // reset timer
             buttonTimer = millis();
             buttonPressed = HIGH;
         }
