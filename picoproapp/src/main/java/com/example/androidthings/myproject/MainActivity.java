@@ -19,6 +19,7 @@ package com.example.androidthings.myproject;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.EditText;
 
@@ -33,7 +34,7 @@ public class MainActivity extends Activity {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     /** CHANGE THE RIGHT-HAND SIDE OF THIS LINE TO THE NAME OF YOUR APPLICATION CLASS **/
-    private SimplePicoPro myBoardApp = new IddHatAnalogReadApp();
+    private SimplePicoPro myBoardApp = new Hw2TemplateApp();
 
     /** DON'T CHANGE THE CODE BELOW - PUT YOUR CODE INTO YOUR APPLICATION CLASS **/
     private Handler handler = new Handler();
@@ -41,14 +42,18 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Log.d(TAG, "java.lang.ObjectonCreate");
+
         /** SCREEN INITIALIZATION */
-        // TODO: What happens if there is no screen attached?
         setContentView(R.layout.textlayout);
         myBoardApp.setActivity(this);
-        EditText editText = (EditText) findViewById(R.id.editText);
+        DisplayMetrics dm = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(dm);
 
+        Log.d(TAG, "Display height in pixels: "+ dm.heightPixels);
+        Log.d(TAG, "Display width in pixels: "+ dm.widthPixels);
+        Log.d(TAG, "Display density in dpi: "+ dm.densityDpi);
 
-        Log.d(TAG, "java.lang.ObjectonCreate");
 
         PeripheralManagerService service = new PeripheralManagerService();
         Log.d(TAG, "Available GPIO: " + service.getGpioList());

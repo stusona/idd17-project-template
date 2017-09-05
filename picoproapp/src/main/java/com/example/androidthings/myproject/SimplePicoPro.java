@@ -158,6 +158,22 @@ public abstract class SimplePicoPro extends SimpleBoard {
         }
     }
 
+    void clearStringOnScreen() {
+        if (activity == null) {
+            Log.e(TAG,"clearString: activity is null");
+            return;
+        }
+
+        EditText editText;
+        editText = (EditText) activity.findViewById(R.id.editText);
+
+        if(editText != null) {
+            editText.setText("");
+        } else {
+            Log.e(TAG,"clearString: Could not find R.id.editText");
+        }
+    }
+
     public void teardown() {
         try {
             GPIO_10.unregisterGpioCallback(gpioCallback);
