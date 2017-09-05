@@ -3,8 +3,8 @@ package com.example.androidthings.myproject;
 import com.google.android.things.pio.Gpio;
 
 /**
- * Template for IDD Fall 2017 HW2 (text entry device)
- * Created by bjoern on 9/5/17.
+ * IDD Fall 2017 HW2 - Text Entry Device
+ * Created by Stuart Sonatina 2017-09-05.
  */
 
 public class Hw2TemplateApp extends SimplePicoPro {
