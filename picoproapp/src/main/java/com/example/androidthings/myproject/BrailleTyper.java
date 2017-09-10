@@ -52,6 +52,8 @@ public class BrailleTyper extends SimplePicoPro {
             b2 = !digitalRead(button2);
             b3 = !digitalRead(button3);
             b4 = !digitalRead(button4);
+            b5 = !digitalRead(button5);
+            b6 = !digitalRead(button6);
             if      (b1==HIGH && b2== LOW && b3== LOW && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('a');
             else if (b1==HIGH && b2== LOW && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('b');
             else if (b1==HIGH && b2==HIGH && b3== LOW && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('c');
@@ -59,32 +61,33 @@ public class BrailleTyper extends SimplePicoPro {
             else if (b1==HIGH && b2== LOW && b3== LOW && b4==HIGH && b5== LOW && b6== LOW) printCharacterToScreen('e');
 
             else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-
             else if (b1==HIGH && b2==HIGH && b3==HIGH && b4==HIGH && b5== LOW && b6== LOW) printCharacterToScreen('g');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
-            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('f');
+            else if (b1==HIGH && b2== LOW && b3==HIGH && b4==HIGH && b5== LOW && b6== LOW) printCharacterToScreen('h');
+            else if (b1== LOW && b2==HIGH && b3==HIGH && b4== LOW && b5== LOW && b6== LOW) printCharacterToScreen('i');
+            else if (b1== LOW && b2==HIGH && b3==HIGH && b4==HIGH && b5== LOW && b6== LOW) printCharacterToScreen('j');
+
+            else if (b1==HIGH && b2== LOW && b3== LOW && b4== LOW && b5==HIGH && b6== LOW) printCharacterToScreen('k');
+            else if (b1==HIGH && b2== LOW && b3==HIGH && b4== LOW && b5==HIGH && b6== LOW) printCharacterToScreen('l');
+            else if (b1==HIGH && b2==HIGH && b3== LOW && b4== LOW && b5==HIGH && b6== LOW) printCharacterToScreen('m');
+            else if (b1==HIGH && b2==HIGH && b3== LOW && b4==HIGH && b5==HIGH && b6== LOW) printCharacterToScreen('n');
+            else if (b1==HIGH && b2== LOW && b3== LOW && b4==HIGH && b5==HIGH && b6== LOW) printCharacterToScreen('o');
+
+            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4== LOW && b5==HIGH && b6== LOW) printCharacterToScreen('p');
+            else if (b1==HIGH && b2==HIGH && b3==HIGH && b4==HIGH && b5==HIGH && b6== LOW) printCharacterToScreen('q');
+            else if (b1==HIGH && b2== LOW && b3==HIGH && b4==HIGH && b5==HIGH && b6== LOW) printCharacterToScreen('r');
+            else if (b1== LOW && b2==HIGH && b3==HIGH && b4== LOW && b5==HIGH && b6== LOW) printCharacterToScreen('s');
+            else if (b1== LOW && b2==HIGH && b3==HIGH && b4==HIGH && b5==HIGH && b6== LOW) printCharacterToScreen('t');
+
+            else if (b1==HIGH && b2== LOW && b3== LOW && b4== LOW && b5==HIGH && b6==HIGH) printCharacterToScreen('u');
+            else if (b1==HIGH && b2== LOW && b3==HIGH && b4== LOW && b5==HIGH && b6==HIGH) printCharacterToScreen('v');
+            else if (b1== LOW && b2==HIGH && b3==HIGH && b4==HIGH && b5== LOW && b6==HIGH) printCharacterToScreen('w');
+            else if (b1==HIGH && b2==HIGH && b3== LOW && b4== LOW && b5==HIGH && b6==HIGH) printCharacterToScreen('x');
+            else if (b1==HIGH && b2==HIGH && b3== LOW && b4==HIGH && b5==HIGH && b6==HIGH) printCharacterToScreen('y');
+            else if (b1==HIGH && b2== LOW && b3== LOW && b4==HIGH && b5==HIGH && b6==HIGH) printCharacterToScreen('z');
 
             // finished with character, set buttonPressed flag back to low
             buttonPressed = LOW;
         }
-
     }
 
     @Override
@@ -95,14 +98,5 @@ public class BrailleTyper extends SimplePicoPro {
             buttonTimer = millis();
             buttonPressed = HIGH;
         }
-
-        /*if (pin==button1) button1State = value;
-        if (pin==button2) button2State = value;
-        if (pin==button3) button3State = value;
-        if (pin==button4) button4State = value;
-        if (pin==button5) button5State = value;
-        if (pin==button6) button6State = value;
-        //*/
-
     }
 }
